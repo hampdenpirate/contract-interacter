@@ -15,7 +15,7 @@ export default function Contact() {
                     Malt, Grain & Cane Pte. Ltd.<br/>
                     Singapore <span role="img" aria-label="singapore">🇸🇬</span> <br/>
                     <br/>
-                    Drop us an email @ NFT@MaltGrainCane.com <span role="img" aria-label="space invader">👾</span> <br/>
+                    Drop us an email @ <h4> NFT@MaltGrainCane.com </h4> <span role="img" aria-label="space invader">👾</span> <br/>
                     <br/>
                 </p>
             </div>
