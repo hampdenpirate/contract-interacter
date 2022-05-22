@@ -35,7 +35,8 @@ export const GemPage = () => {
   let gemInfo = (gemstoneId === 1 ? {
       name: "Amethyst",
       img: Amethyst,
-      color: 'purple'
+      color: 'purple',
+      txt: "Test Test Text..."
     }
     :
     (gemstoneId === 2 ? {
@@ -164,6 +165,7 @@ export const GemPage = () => {
               <p style={{color: gemInfo.color}}>{gemInfo.name} gemstone #1-50</p>
             </div>
             <div className="minting-section">
+              <p>{gemInfo.txt}</p>
               <Button
                 onConnectToMetamask={connectToMetamask}
                 onMint={handleMint}
