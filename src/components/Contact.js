@@ -13,17 +13,10 @@ export default function Contact() {
                 <img alt="decor" className="contact-us-img" src={contact_us} />
                 <p>
                     Malt, Grain & Cane Pte. Ltd.<br/>
-                    Singapore<br/>
+                    Singapore <span role="img" aria-label="singapore">🇸🇬</span> <br/>
                     <br/>
-                    Drop us an email @ Info@MaltGrainCane.com<br/>
+                    Drop us an email @ NFT@MaltGrainCane.com <span role="img" aria-label="space invader">👾</span> <br/>
                     <br/>
-                    We accept snail mail @ the following address:<br/>
-                    <br/>
-                    Malt, Grain & Cane Pte. Ltd.<br/>
-                    <br/>
-                    160 Robinson Road , #14-04 Singapore Business Federation Centre <br/>
-                    <br/>
-                    Singapore 068914<br/>
                 </p>
             </div>
             <Footer/>
