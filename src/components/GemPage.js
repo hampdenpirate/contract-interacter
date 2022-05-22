@@ -113,14 +113,14 @@ export const GemPage = () => {
     <a href='/'>
       <img className='gemstone-img' src={Sapphire} alt="Sapphire"/>
       {/* <p>Mint Sapphire</p> */}
-      <p>Coming soon</p>
+      <p>Mint ???</p>
     </a>
     ),
     (
     <a href='/'>
       <img className='gemstone-img' src={Emerald} alt="Emerald"/>
       {/* <p>Mint Emerald</p> */}
-      <p>Coming soon</p>
+      <p>Mint ???</p>
     </a>
     ),
     (
@@ -134,7 +134,7 @@ export const GemPage = () => {
     <a href='/'>
       <img className='gemstone-img' src={Amber} alt="Amber"/>
       {/* <p>Mint Amber</p> */}
-      <p>Coming soon</p>
+      <p>Mint ???</p>
     </a>
     ),
     (
