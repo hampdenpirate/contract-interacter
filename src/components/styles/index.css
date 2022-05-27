@@ -69,7 +69,11 @@ html {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    padding: 30px;
+    padding: 0px 30px 30px;
+}
+
+.gemstone-section .minting-section p {
+    text-align: left;
 }
 
 .gemstone-img {
@@ -159,5 +163,6 @@ html {
 
     .gemstone-section .minting-section {
         width: 50vw;
+        padding: 30px;
     }
 }

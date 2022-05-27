@@ -11,10 +11,24 @@
     display: flex;
 }
 
+.about-content img {
+    height: 100%;
+}
+
 .about-content p {
     padding: 20px 5%;
     line-height: 150%;
     /* background-color: red; */
+}
+
+.about-content p a {
+    font-weight: bold;
+    color: inherit;
+    transition: all 0.3s;
+}
+
+.about-content p a:hover {
+    opacity: 0.8;
 }
 
 @media only screen and (max-width: 800px) {

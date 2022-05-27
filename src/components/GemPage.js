@@ -36,7 +36,12 @@ export const GemPage = () => {
       name: "Amethyst",
       img: Amethyst,
       color: 'purple',
-      txt: "Test Test Text..."
+      txt: (<p>An Amethyst gemstone that only exists on the Ethereum blockchain. A commemorative token for the purchase of Malt, Grain & Cane's Curated Range bottlings (Year 2). 
+        <br/><br/>
+      Upon closer inspection of this gemstone, a Powerful rush of emotions flow through you, leaving you with a bad mixture of melancholy, terrible longing, and nostalgia for a nearly-forgotten someone. The temptation is there, but you resist the Powerful urge to reach back out to them.
+      </p>),
+      bottling: "Saudade 我紫在乎你 - Irish Whiskey 2002, 18 Years, 50.2%",
+      bottle_link: "https://www.maltgraincane.com/Bottles/008B"
     }
     :
     (gemstoneId === 2 ? {
@@ -165,7 +170,9 @@ export const GemPage = () => {
               <p style={{color: gemInfo.color}}>{gemInfo.name} gemstone #1-50</p>
             </div>
             <div className="minting-section">
-              <p>{gemInfo.txt}</p>
+              {gemInfo.txt}
+              <br/>
+              <p>Bottling: <a style={{color: gemInfo.color}} href={gemInfo.bottle_link}>{gemInfo.bottling}</a></p>
               <Button
                 onConnectToMetamask={connectToMetamask}
                 onMint={handleMint}
