@@ -21,25 +21,25 @@ export default function Home2022() {
                     <img className='gemstone-img' src={Amethyst} alt="Amethyst"/>
                     <p>Mint Amethyst</p>
                 </a>
-                <a href='/'> {/* will become '/2' */}
+                <a href='/2'> {/* will become '/2' */}
                     <img className='gemstone-img' src={Sapphire} alt="Sapphire"/>
-                    {/* <p>Mint Sapphire</p> */}
-                    <p>Mint ???</p>
+                    <p>Mint Sapphire</p>
+                    
                 </a>
-                <a href='/'>
+                <a href='/3'>
                     <img className='gemstone-img' src={Emerald} alt="Emerald"/>
-                    {/* <p>Mint Emerald</p> */}
-                    <p>Mint ???</p>
+                    <p>Mint Emerald</p>
+                    
                 </a>
                 <a href='/'>
                     <img className='gemstone-img' src={Citrine} alt="Citrine"/>
                     {/* <p>Mint Citrine</p> */}
                     <p>Coming soon</p>
                 </a>
-                <a href='/'>
+                <a href='/5'>
                     <img className='gemstone-img' src={Amber} alt="Amber"/>
-                    {/* <p>Mint Amber</p> */}
-                    <p>Mint ???</p>
+                    <p>Mint Amber</p>
+                    
                 </a>
                 <a href='/'>
                     <img className='gemstone-img' src={Ruby} alt="Ruby"/>

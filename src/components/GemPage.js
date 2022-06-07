@@ -47,31 +47,64 @@ export const GemPage = () => {
     (gemstoneId === 2 ? {
       name: "Sapphire",
       img: Sapphire,
-      color: '#243eeb'
+      color: '#243eeb',
+      txt: (<p>A Sapphire gemstone that only exists on the Ethereum blockchain. A commerative token for the purchase of Malt, Grain & Cane's Curated Range bottlings (Year 2).
+      <br/><br/>
+      Upon closer inspection of this gemstone, you suddenly feel as if you are floating down a waterbody, with the delicate scent of peonies surrounding & embracing the Space around you.
+      You feel raindrops fall across your face, as your eyes gently close.
+      You start to feel the Space around you gradually expand, as your body gently drifts with the flow, into the great Unknown.
+      </p>),
+      bottling: "Ophelia - Staoisha 2013, 8 Years, 63.5%",
+      bottle_link: "https://www.maltgraincane.com/bottles/010"
     }
     :
     (gemstoneId === 3 ? {
       name: "Emerald",
       img: Emerald,
       color: 'green',
+      txt: (<p>An Emerald gemstone that only exists on the Ethereum blockchain.
+      A commerative token for the purchase of Malt, Grain & Cane's Curated Range bottlings (Year 2).
+      <br/><br/>
+      Upon closer inspection of this gemstone, you suddenly feel a thrilling rush of energising force pulsating within you. You are reminded of your younger, youthful days,
+      as if, for a brief moment in Time, you are youthful as you once were.
+      <br/><br/>
+      "What a wonderful Time to be alive..."</p>),
+      bottling: "Youth 青年 - Clarendon 2010, Jamaican Rum, 11 years, 67.2%",
+      bottle_link: "https://www.maltgraincane.com/bottles/011"
     }
     :
     (gemstoneId === 4 ? {
       name: "Citrine",
       img: Citrine,
       color: '#fdb51c',
+      txt: (<p></p>),
+      bottling: "",
+      bottle_link: ""
     }
     :
     (gemstoneId === 5 ? {
       name: "Amber",
       img: Amber,
       color: '#fe5b02',
+      txt: (<p>An Amber stone that only exists on the Ethereum blockchain. 
+      A commerative token for the purchase of Malt, Grain & Cane's Curated Range bottlings (Year 2).
+      <br/><br/>
+      Upon closer inspection of this fossilised resin, you are suddenly transported to Japan, during the the early 1980s. 
+      You are driving in your Daihatsu, along the coast of Shizuoka Prefecture, on a cool summer evening. With the windows down, you look across the Suruga Bay.
+      <br/><br/>
+      The Japanese Citypop hit-song, "Remember Me" by Step, is playing on the car radio.
+      Your Soul is at peace, as you smile, while you continue your driving journey into the night.</p>),
+      bottling: "012: Sunset Boulevard - Secret Orkney 2007, Oloroso Quarter Cask, 15 Years, 65.8%",
+      bottle_link: "https://www.maltgraincane.com/bottles/012"
     }
     :
     (gemstoneId === 6 ? {
       name: "Ruby",
       img: Ruby,
       color: 'red',
+      txt: (<p></p>),
+      bottling: "",
+      bottle_link: ""
     }
     :
     {}))))));
@@ -116,17 +149,15 @@ export const GemPage = () => {
     </a>
     ),
     (
-    <a href='/'>
+    <a href='/2'>
       <img className='gemstone-img' src={Sapphire} alt="Sapphire"/>
-      {/* <p>Mint Sapphire</p> */}
-      <p>Mint ???</p>
+      <p>Mint Sapphire</p>
     </a>
     ),
     (
-    <a href='/'>
+    <a href='/3'>
       <img className='gemstone-img' src={Emerald} alt="Emerald"/>
-      {/* <p>Mint Emerald</p> */}
-      <p>Mint ???</p>
+      <p>Mint Emerald</p>
     </a>
     ),
     (
@@ -137,10 +168,9 @@ export const GemPage = () => {
     </a>
     ),
     (
-    <a href='/'>
+    <a href='/5'>
       <img className='gemstone-img' src={Amber} alt="Amber"/>
-      {/* <p>Mint Amber</p> */}
-      <p>Mint ???</p>
+      <p>Mint Amber</p>
     </a>
     ),
     (
@@ -158,7 +188,7 @@ export const GemPage = () => {
   };
 
   // only allow for id 1 because it's currently the only released version
-  if (gemstoneId >= 1 && gemstoneId <=1) {
+  if (gemstoneId >= 1 && gemstoneId <=5) {
     return (
       <div className="body-div">
           <Header/>
@@ -167,7 +197,7 @@ export const GemPage = () => {
           <div className="gemstone-section">
             <div className="showcase">
               <img alt="gemstone" className="gemstone-img" src={gemInfo.img} />
-              <p style={{color: gemInfo.color}}>{gemInfo.name} gemstone #1-50</p>
+              <p style={{color: gemInfo.color}}>{gemInfo.name} gemstone #{50 * (gemstoneId - 1) + 1}-{50 * gemstoneId}</p>
             </div>
             <div className="minting-section">
               {gemInfo.txt}
