@@ -55,7 +55,7 @@ export const GemPage = () => {
       You start to feel the Space around you gradually expand, as your body gently drifts with the flow, into the great Unknown.
       </p>),
       bottling: "Ophelia - Staoisha 2013, 8 Years, 63.5%",
-      bottle_link: "https://www.maltgraincane.com/bottles/010"
+      bottle_link: "https://www.maltgraincane.com/bottles/010B"
     }
     :
     (gemstoneId === 3 ? {
@@ -70,7 +70,7 @@ export const GemPage = () => {
       <br/><br/>
       "What a wonderful Time to be alive..."</p>),
       bottling: "Youth 青年 - Clarendon 2010, Jamaican Rum, 11 years, 67.2%",
-      bottle_link: "https://www.maltgraincane.com/bottles/011"
+      bottle_link: "https://www.maltgraincane.com/bottles/011B"
     }
     :
     (gemstoneId === 4 ? {
@@ -95,7 +95,7 @@ export const GemPage = () => {
       The Japanese Citypop hit-song, "Remember Me" by Step, is playing on the car radio.
       Your Soul is at peace, as you smile, while you continue your driving journey into the night.</p>),
       bottling: "012: Sunset Boulevard - Secret Orkney 2007, Oloroso Quarter Cask, 15 Years, 65.8%",
-      bottle_link: "https://www.maltgraincane.com/bottles/012"
+      bottle_link: "https://www.maltgraincane.com/bottles/012B"
     }
     :
     (gemstoneId === 6 ? {
@@ -202,7 +202,7 @@ export const GemPage = () => {
             <div className="minting-section">
               {gemInfo.txt}
               <br/>
-              <p>Bottling: <a style={{color: gemInfo.color}} href={gemInfo.bottle_link}>{gemInfo.bottling}</a></p>
+              <p>Bottling: <a style={{color: gemInfo.color, fontWeight: "bold"}} href={gemInfo.bottle_link}>{gemInfo.bottling}</a></p>
               <Button
                 onConnectToMetamask={connectToMetamask}
                 onMint={handleMint}
