@@ -8,7 +8,7 @@ export const Button = (props) => {
   const [message, setMessage] = useState("Connect to wallet");
 
   useEffect(() => {
-    wallet.address && props && setMessage(`Mint ${props.gemType}`);
+    wallet.address && props && setMessage(`Whitelist ${props.gemType}`);
   }, [wallet.address, props]);
 
   const handleClick = () => {

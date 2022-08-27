@@ -6,6 +6,7 @@ import GemPage from './components/GemPage';
 import Home2022 from './components/Home2022';
 import Contact from './components/Contact';
 import About from './components/About';
+import WhitelistingPage from './components/WhitelistingPage';
 
 // font awesome icons
 // import { library } from '@fortawesome/fontawesome-svg-core'
@@ -21,6 +22,7 @@ export const App = () => {
         <Route path='/:gemstoneId' element={<GemPage/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/about' element={<About/>} />
+        <Route path='/whitelist' element={<WhitelistingPage/>} />
       </Routes>
     </Router>
   );

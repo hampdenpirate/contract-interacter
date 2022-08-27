@@ -17,6 +17,7 @@ export const useContract = () => {
     setContract(contract);
   }, [provider]);
   const getContractName = async () => (contract ? await contract.name() : "");
+  
   const mint = async (address, gemId) => {
     const contractWithSigner = contract.connect(signer);
     const mintTxn = await (await contractWithSigner)
@@ -25,5 +26,18 @@ export const useContract = () => {
     if (!mintTxn) return false;
     return true;
   };
-  return { mint, getContractName, isContractLoaded: !!contract };
+
+  const whitelistAddress = async (address) => {
+    const contractWithSigner = contract.connect(signer)
+    const whitelistTxn = await (await contractWithSigner)
+      .addAddressToWhitelist(address)
+      .catch((e) => {
+        console.log(e)
+      });
+    if (!whitelistTxn) return false;
+    return true;
+  }
+
+
+  return { whitelistAddress, mint, getContractName, isContractLoaded: !!contract };
 };
