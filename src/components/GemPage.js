@@ -77,9 +77,16 @@ export const GemPage = () => {
       name: "Citrine",
       img: Citrine,
       color: '#fdb51c',
-      txt: (<p></p>),
-      bottling: "",
-      bottle_link: ""
+      txt: (<p>A Citrine gemstone that only exists on the Ethereum blockchain.
+      A commerative token for the purchase of Malt, Grain & Cane's Curated Range bottlings (Year 2).
+      <br/><br/>
+      Upon closer inspection of this gemstone, your Mind starts to experience brief, yet, lucid moments of clarity. 
+      You're start to see things in a broader & wholistic perspective. In the back of your Mind, you barely see a male figure, dressed up in a bright yellow jumpsuit, flailing a pair of nunchucks...
+      <br/><br/>
+      "Bruce.. is that.. you..?"
+      </p>),
+      bottling: "Enter The Dragon 见龙在田 - Port Charlotte 2001, 21 Years, 55.1%",
+      bottle_link: "https://www.maltgraincane.com/bottles/009B"
     }
     :
     (gemstoneId === 5 ? {
@@ -102,9 +109,20 @@ export const GemPage = () => {
       name: "Ruby",
       img: Ruby,
       color: 'red',
-      txt: (<p></p>),
-      bottling: "",
-      bottle_link: ""
+      txt: (<p>
+      A Ruby gemstone that only exists on the Ethereum blockchain.
+      A commerative token for the purchase of Malt, Grain & Cane's Curated Range bottlings (Year 2).
+      <br/><br/>
+      Upon closer inspection of this gemstone, you start to notice numerous cracks developing across the gemstone. It seems like something is emerging out of this gemstone. A sudden burst of brilliant energy roars through the cracks, as a maiden emerges. 
+      <br/><br/>
+      You blink & stumble, as you're bewildered by this abnormally.
+      <br/><br/>
+      Your vision instantly snaps back into focus, as the Ruby gem is once made whole again, and you start to question to yourself; "Was that a Dream, or was that Reality...?"
+      <br/><br/>
+      You pick yourself up, gather your belongings, and continue your journey forward.
+      </p>),
+      bottling: "Begin Again - Ledaig 2005 Foursquare Rum Cask Finish, 16 Years, 58.7%",
+      bottle_link: "https://www.maltgraincane.com/bottles/013B"
     }
     :
     {}))))));
@@ -163,8 +181,8 @@ export const GemPage = () => {
     (
     <a href='/'>
       <img className='gemstone-img' src={Citrine} alt="Citrine"/>
-      {/* <p>Mint Citrine</p> */}
-      <p>Coming soon</p>
+      <p>Mint Citrine</p>
+      {/* <p>Coming soon</p> */}
     </a>
     ),
     (
@@ -174,10 +192,10 @@ export const GemPage = () => {
     </a>
     ),
     (
-    <a href='/'>
+    <a href='/6'>
       <img className='gemstone-img' src={Ruby} alt="Ruby"/>
-      {/* <p>Mint Ruby</p> */}
-      <p>Coming soon</p>
+      <p>Mint Ruby</p>
+      {/* <p>Coming soon</p> */}
     </a>
     )
   ];
@@ -188,7 +206,7 @@ export const GemPage = () => {
   };
 
   // only allow for id 1 because it's currently the only released version
-  if (gemstoneId >= 1 && gemstoneId <=5) {
+  if (gemstoneId >= 1 && gemstoneId <=6) {
     return (
       <div className="body-div">
           <Header/>

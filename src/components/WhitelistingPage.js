@@ -72,6 +72,7 @@ export default function WhitelistingPage() {
                 isLoading={isAwaitingTxn}
                 isDisabled={false}
                 loadingMessage="Whitelisting"
+                buttonMessage="Whitelist"
                 />
                 <br/>
                 <span style={{ fontSize: "16px" }}>
