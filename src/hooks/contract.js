@@ -27,10 +27,10 @@ export const useContract = () => {
     return true;
   };
 
-  const whitelistAddress = async (address) => {
+  const whitelistAddress = async (address, gemType) => {
     const contractWithSigner = contract.connect(signer)
     const whitelistTxn = await (await contractWithSigner)
-      .addAddressToWhitelist(address)
+      .addAddressToWhitelist(address, gemType)
       .catch((e) => {
         console.log(e)
       });

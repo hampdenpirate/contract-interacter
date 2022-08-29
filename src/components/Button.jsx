@@ -22,7 +22,7 @@ export const Button = (props) => {
   return (
     <button className="button" onClick={handleClick} disabled={props.isDisabled}>
       {props.isLoading ? (
-        "Minting"
+        props.loadingMessage ? props.loadingMessage : "Minting"
       ) : message}
     </button>
   );

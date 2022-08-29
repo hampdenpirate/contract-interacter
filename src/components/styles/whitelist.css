@@ -1,0 +1,14 @@
+.whitelisting-main div {
+    display: block;
+}
+
+.whitelisting-main {
+    display: block;
+    height: calc(75vh - 130px); /* Footer is 25vh, header is 130px */
+    width: 100%;
+    text-align: center;
+}
+
+#gem-label { 
+    font-size: 14px;
+}

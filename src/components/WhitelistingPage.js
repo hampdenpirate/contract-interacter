@@ -5,10 +5,13 @@ import { useRecoilValue } from "recoil";
 import { useContract } from "../hooks/contract";
 import { useWallet } from "../hooks/wallet";
 import { walletState } from "../state/app";
+import truncateEthAddress from 'truncate-eth-address';
 // import components 
 import Header from './Header';
 import Footer from './Footer';
 import { Button } from './Button';
+// import styles 
+import './styles/whitelist.css';
 
 export default function WhitelistingPage() {
 
@@ -21,6 +24,8 @@ export default function WhitelistingPage() {
     // client address 
     // eslint-disable-next-line
     const [clientAddress, setClientAddress] = useState("");
+    // eslint-disable-next-line
+    const [gemType, setGemType] = useState(0);
     // eslint-disable-next-line
     const [isAwaitingTxn, setIsAwaitingTxn] = useState(false);
 
@@ -36,7 +41,7 @@ export default function WhitelistingPage() {
     
       const handleWhitelist = async () => {
         setIsAwaitingTxn(true);
-        const response = await whitelistAddress(wallet.address);
+        const response = await whitelistAddress(wallet.address, gemType);
         if (response) {
           console.log(response);
           toast.success("Success! Address is whitelisted!");
@@ -52,15 +57,30 @@ export default function WhitelistingPage() {
         <>
         <Header/>
         <div className='whitelisting-main'>
-            Input client address here:
-            <input type="text" value={clientAddress} onChange={(e) => setClientAddress(e.target.value)}/>
-            <Button
-             onConnectToMetamask={connectToMetamask}
-             onMint={handleWhitelist}
-             gemType={clientAddress} // this is the client address   
-             isLoading={isAwaitingTxn}
-             isDisabled={false}
-            />
+            <div>
+                Input client address here:
+                <br/><br/>
+                <input placeholder='Enter address' type="text" value={clientAddress} onChange={(e) => setClientAddress(e.target.value)}/>
+                <br/>
+                <br/>
+                <label id="gem-label" >Gem Type: </label><input min='0' max='5' placeholder='Enter gemstone type' type="number" value={gemType} onChange={(e) => setGemType(e.target.value)}/>
+                <br/>
+                <Button
+                onConnectToMetamask={connectToMetamask}
+                onMint={handleWhitelist}
+                gemType={`${truncateEthAddress(clientAddress)} for gem ${gemType}`} // this is the client address & gem type 
+                isLoading={isAwaitingTxn}
+                isDisabled={false}
+                loadingMessage="Whitelisting"
+                />
+                <br/>
+                <span style={{ fontSize: "16px" }}>
+                    Connected address: {wallet.address ? truncateEthAddress(wallet.address) : "None"}
+                </span>
+                <br/>
+                <br/>
+                <strong>Make sure address is correct, operation is irreversible</strong>
+            </div>
         </div>
         <Footer/>
         </>
