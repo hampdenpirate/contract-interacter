@@ -80,6 +80,11 @@ export default function WhitelistingPage() {
                 </span>
                 <br/>
                 <br/>
+                <span>Gem Selected: {
+                    Number(gemType) === 0 ? "Amethyst" : Number(gemType) === 1 ? "Sapphire" : Number(gemType) === 2 ? "Emerald" : Number(gemType) === 3 ? "Citrine" : Number(gemType) === 4 ? "Amber" : Number(gemType) === 5 ? "Ruby" : "None"
+                }</span>
+                <br/>
+                <br/>
                 <strong>Make sure address is correct, operation is irreversible</strong>
             </div>
         </div>
