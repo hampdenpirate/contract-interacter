@@ -41,7 +41,7 @@ export default function WhitelistingPage() {
     
       const handleWhitelist = async () => {
         setIsAwaitingTxn(true);
-        const response = await whitelistAddress(wallet.address, gemType);
+        const response = await whitelistAddress(clientAddress, gemType);
         if (response) {
           console.log(response);
           toast.success("Success! Address is whitelisted!");
