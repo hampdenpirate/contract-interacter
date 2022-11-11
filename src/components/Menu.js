@@ -14,6 +14,7 @@ export default function Menu(props) {
             <div className={openMenu ? 'menu active' : 'menu'}>
                 <div className="menu-content-wrapper">
                     <Link location="/">Gemstones (Y2)</Link>
+                    <Link location="/goblet">Infinity Goblet (Y2)</Link>
                     <Link location="/about">About Us</Link>
                     <Link location="/contact">Contact Us</Link>
                 </div>

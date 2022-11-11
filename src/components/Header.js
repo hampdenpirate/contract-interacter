@@ -9,7 +9,7 @@ import "./styles/components/header.css";
 export default function Header() {
     return (
         <div className="header-wrap">
-            <img alt="MGC logo" className="logo" src={mgc_logo} />
+            <a href='/'><img alt="MGC logo" className="logo" src={mgc_logo} /></a>
             <Menu/>
         </div>
     )

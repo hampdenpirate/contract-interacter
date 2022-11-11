@@ -1,0 +1,16 @@
+.goblet-content-wrap .gemstone-section {
+    /* flex-direction: column; */
+    text-align: center;
+    align-items: center;
+}
+
+.goblet-content-wrap .gemstone-img {
+    max-width: 100vw;
+    max-height: 60vh;
+}
+
+.goblet-content-wrap .gemstone-section .minting-section {
+    text-align: left;
+    width: 50%;
+    padding-top: 40px;
+}
